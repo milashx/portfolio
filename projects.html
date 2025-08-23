@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="projects.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Projects</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <nav class="header-nav">
+          <a href="index.html" class="nav-button"><i class="fas fa-home"></i>Home</a>
+          <a href="projects.html" class="nav-button"><i class="fa-solid fa-bars-progress"></i>Projects</a>
+          <a href="about.html" class="nav-button"><i class="fa-solid fa-address-card"></i>About</a>
+          <a href="contacts.html" class="nav-button"><i class="fa-solid fa-envelope"></i>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+  <div class="home-wrapper">
+    <div class="projects-container">
+
+      <div class="carousel">
+        <button class="arrow left">&#10094;</button>
+        <div class="carousel-track">
+
+          
+          <div class="project-card">
+            <img src="appdelivery.png" alt="Project 1">
+            <h3>Food Delivery App – Frontend & UI Design /2025/</h3>
+            <p>Frontend and UI design for a Food Delivery App, developed collaboratively with a teammate handling the backend.</p>
+            <a href="SiteVideo.mp4" target="_blank" class="btn">View Project</a>
+          </div>
+                    
+          <div class="project-card">
+            <img src="shelter.png" alt="Project 2">
+            <h3>Pet Adoption App UI Design – Coursework /2025/</h3>
+            <p>Designed the user interface for a pet adoption app as part of a UI course, focusing on usability, aesthetics, and intuitive navigation.</p>
+            <a href="AppVideo.mp4" target="_blank" class="btn">View Project</a>
+          </div>
+          
+          <div class="project-card">
+            <img src="travel.png" alt="Project 3">
+            <h3>Travel Agency Website Migration – Wix to WordPress /2024/</h3>
+            <p>Rebuilt a travel agency website in WordPress by migrating and replicating the original Wix site, ensuring design fidelity and full functionality.</p>
+            <a href="https://www.fcradventures.com/" target="_blank" class="btn">View Project</a>
+          </div>
+          
+          <div class="project-card">
+            <img src="dog.png" alt="Project 4">
+            <h3>DogMatcher – Find Your Perfect Pup /2023/</h3>
+            <p>A website designed for dog lovers to discover which dog breed suits their lifestyle and personality.</p>
+            <a href="https://milashx.github.io/perfect-dog-for-you/" target="_blank" class="btn">View Project</a>
+          </div>
+
+         
+          <div class="project-card">
+            <img src="kids.png" alt="Project 5">
+            <h3>KidsCorner – Interactive Exercise Site /2022/</h3>
+            <p>A static website designed as a practice project to demonstrate various HTML and CSS elements and their nesting.</p>
+            <a href="https://milashx.github.io/kids-corner-project/" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+
+ 
+        <button class="arrow right">&#10095;</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.arrow.right');
+  const prevButton = document.querySelector('.arrow.left');
+  let currentIndex = 0;
+
+function updateCarousel() {
+  const cardWidth = slides[0].getBoundingClientRect().width + 20; // width + margin*2
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+</script>
+
+
+</div>
+</body>
+</html>

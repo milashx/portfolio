@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    flex-direction: column;
+    display: flex;
+    padding: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background: rgb(6, 6, 6);
+}
+
+.header-content {
+    background: linear-gradient(to top, #5C7653, #3d563f);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px); 
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-button {
+    display: flex;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #cdcbcb;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+
+
+
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.home-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #5C7653, #3d563f);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.home-content {
+  display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: nowrap; /* Забраняваме пренасянето */
+    max-width: 1200px; /* Опционално, за да ограничим ширината */
+    margin: 0 auto; 
+    
+}
+
+.home-content h2{
+    font-size: 35px;
+}
+
+.home-content P{
+    line-height: 40PX;
+}
+
+
+
+.contacts-info{
+    font-family: 'Open Sans', Arial, sans-serif;
+    flex: 1;
+    color: #f5f5f5;
+    padding: 30px;
+    line-height: 1.6;
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.1); /* лек прозрачен фон */
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(5px); /* меко замъгляване за modern look */
+    -webkit-backdrop-filter: blur(5px);
+    
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: none !important;
+    height: 600px !important; 
+    min-height: 600px;
+    max-height: 600px;
+    border-radius: 12px;
+    box-shadow: none !important;
+    padding: 0;
+
+    
+}
+
+
+
+@media (max-width: 992px) {
+ 
+  .home-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 900px; 
+  }
+
+
+  .contacts,
+  .form {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+
+  .contacts {
+    padding: 24px;
+    text-align: left; 
+  }
+
+
+  .form iframe {
+    height: 560px;
+  }
+
+  .home-wrapper {
+    padding: 24px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .header-nav {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+  }
+  .nav-button {
+    justify-content: center;
+    width: 100%;
+  }
+
+
+  .home-content {
+    gap: 24px;
+  }
+
+  .contacts {
+    padding: 20px;
+  }
+
+  .form {
+    min-height: auto; 
+    height: auto;
+  }
+  .form iframe {
+    height: 480px;
+  }
+
+  .home-wrapper {
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .home-content {
+    gap: 18px;
+  }
+
+  .contacts {
+    padding: 16px;
+    line-height: 1.55;
+  }
+
+  .contacts h2 {
+    font-size: 1.25rem; 
+    margin-bottom: 8px;
+  }
+
+  .contacts p {
+    font-size: 0.95rem; 
+  }
+
+  .form iframe {
+    height: 400px;
+  }
+
+  .home-wrapper {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-height: 600px) {
+  .form iframe {
+    height: 340px; 
+  }
+}
+
+@media (min-width: 993px) {
+  .home-content {
+    flex-wrap: nowrap;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .contacts,
+  .form {
+    flex: 0 0 50%;
+    min-width: 0;
+  }
+}
+
+
+
+
